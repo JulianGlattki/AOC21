@@ -1,5 +1,3 @@
-from functools import reduce
-
 SLIDING_WINDOW_SIZE = 3
 
 file1 = open('input.txt', 'r')

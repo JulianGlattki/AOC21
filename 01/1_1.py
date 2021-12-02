@@ -1,5 +1,3 @@
-import functools
-
 file1 = open('input.txt', 'r')
 lines = [int(line.strip('\n')) for line in file1.readlines()]
 
