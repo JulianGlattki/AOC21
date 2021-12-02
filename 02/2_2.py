@@ -4,15 +4,18 @@ lines = [line.strip('\n').split(" ") for line in file1.readlines()]
 
 horizontal = 0
 depth = 0
+aim = 0
 
 for line in lines:
     direction = line[0] 
     distance = int(line[1])
+
     if direction == 'forward':
         horizontal += distance
+        depth += aim * distance
     elif direction == 'up':
-       depth -= distance
+       aim -= distance
     else:
-       depth += distance
+       aim += distance
 
 print(depth * horizontal)
