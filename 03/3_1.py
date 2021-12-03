@@ -8,7 +8,3 @@ gamma_rate = int(most_common_bits_as_string, base=2)
 epsilon_rate = int(most_common_bits_as_string.translate({48: 49, 49:48}), base=2)
 
 print(gamma_rate * epsilon_rate)
-
-
-
-
