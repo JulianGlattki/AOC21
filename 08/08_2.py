@@ -42,8 +42,6 @@ all_lines_split = [line.strip('\n').split('|') for line in file1.readlines()]
 signals = [[''.join(sorted(segment)) for segment in line[0].rstrip(' ').split(' ')] for line in all_lines_split]
 output_values = [[''.join(sorted(segment)) for segment in line[1].lstrip(' ').split(' ')] for line in all_lines_split]
 
-# flat_output_values = [segment for output_value in output_values for segment in output_value]
-
 all_output_values = 0
 
 for signal, output in zip(signals, output_values):
