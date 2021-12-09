@@ -1,26 +1,4 @@
 from functools import reduce
-RISK_LEVEL_ADD = 1
-
-
-# start with a low point
-# go to each adjacent point
-    # check if the adjacent points adjacent points are equal to height of adjacent point + 1
-        # if it is true for one go to its adjacent points excluding the the current point
-            # remember to save the adjacent points coordinates
-        # else return all collected coordinates
-def is_low_point(matrix, row, column):
-    if matrix[row][column] is None or matrix[row][column] == 9:
-        return False
-    if row - 1 >= 0 and matrix[row - 1][column] is not None and matrix[row - 1][column] <= matrix[row][column]:
-        return False
-    if row + 1 < len(matrix) and matrix[row + 1][column] is not None and matrix[row + 1][column] <= matrix[row][column]:
-        return False
-    if column - 1 >= 0 and matrix[row][column - 1] is not None and matrix[row][column - 1] <= matrix[row][column]:
-        return False
-    if column + 1 < len(matrix[row]) and matrix[row][column + 1] is not None and matrix[row][column + 1] <= matrix[row][column]:
-        return False
-
-    return True
 
 
 def get_coordinates_of_basin(all_coordinates_of_basin, row, column):
