@@ -56,9 +56,8 @@ matrix = [list(map(int, list(line.strip('\n')))) for line in file1.readlines()]
 
 
 count = 0
-found = False
 
-while not found:
+while not all_flashed():
     count = count + 1
     matrix = [[column + 1 for column in row] for row in matrix]
     for i in range(len(matrix)):
@@ -66,9 +65,5 @@ while not found:
             if matrix[i][j] > 9:
                 matrix[i][j] = 0
                 flash(i, j)
-
-    if all_flashed():
-        found = True
-
 
 print(count)
