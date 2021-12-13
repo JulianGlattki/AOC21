@@ -54,6 +54,7 @@ for instruction in instructions:
             right_half[i] = new_list
             right_half[i].reverse()
 
+        print(right_half[0])
         matrix = [t[0] for t in zip(right_half)]
 
 
